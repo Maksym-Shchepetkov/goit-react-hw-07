@@ -2,10 +2,9 @@ import { Field, Form, Formik } from 'formik';
 import s from './ContactForm.module.css';
 import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
 import { useId } from 'react';
 import { changeFilter } from '../../redux/filtersSlice';
-
+import { addContact } from '../../redux/contactsOps';
 const ContactForm = () => {
   const dispatch = useDispatch();
   const nameId = useId();

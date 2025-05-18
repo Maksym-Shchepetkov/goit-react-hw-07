@@ -4,16 +4,13 @@ import './index.css';
 import App from './components/App/App';
 import { Toaster } from 'react-hot-toast';
 import { Provider } from 'react-redux';
-import { persistor, store } from './redux/store';
-import { PersistGate } from 'redux-persist/integration/react';
+import { store } from './redux/store';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <PersistGate loading={null} persistor={persistor}>
-      <Provider store={store}>
-        <App />
-        <Toaster />
-      </Provider>
-    </PersistGate>
+    <Provider store={store}>
+      <App />
+      <Toaster />
+    </Provider>
   </StrictMode>
 );
